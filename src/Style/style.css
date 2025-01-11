@@ -240,6 +240,11 @@ p.lead {
         display: flex;
         justify-content: center;
     }
+
+    /* Page Not Found */
+    .page-wrap {
+        padding: 150px 0px !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -368,6 +373,10 @@ p.lead {
         font-size: 1.5em;
     }
     
+    /* Page Not Found */
+    .page-wrap {
+        padding: 150px 0px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -460,5 +469,10 @@ p.lead {
     }
     .cart button span, .buy button span {
         font-size: 0.9rem;
+    }
+
+    /* Page Not Found */
+    .page-wrap {
+        padding: 155px 0px !important;
     }
 }
