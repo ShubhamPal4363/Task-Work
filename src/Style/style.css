@@ -1,0 +1,464 @@
+/* login */
+.login-data h3 {
+    font-size: 2.5em;
+}
+
+.login-btn {
+    font-size: 1em;
+}
+
+.login-option {
+    font-size: 1.2em;
+}
+
+/* register */
+.welcome-data h3 {
+    font-size: 2.5em;
+}
+
+.welcome-btn {
+    font-size: 1em;
+}
+
+.welcome-login-option {
+    font-size: 1.2em;
+}
+
+/* leftside and rightside */
+.leftside {
+    height: 100vh;
+    padding-bottom: 70px;
+    overflow-y: auto;
+}
+
+.rightside {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: visible;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-data li, .brand-data li {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.product-title {
+    font-size: 1.1rem;
+}
+  
+.product-rating {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.product-dimensions {
+    font-size: 1.1rem;
+}
+
+.product-price {
+    font-size: 2em;
+}
+
+.original-price {
+    font-size: 0.6em;
+    color: gray;
+}
+
+.discount {
+    font-size: 0.8em;
+    color: green;
+}
+
+.product-info {
+    font-size: 1.1rem;
+}
+
+section.text-muted {
+    overflow: visible;
+    height: auto;
+    padding-top: 100px;
+}
+
+/* singleproduct */
+.single-section {
+    padding: 75px 0px;
+}
+
+h2.text-muted {
+    font-size: 1em;
+    color: #6c757d;
+}
+
+h1.text-dark {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+p.lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.cart button, .buy button {
+    text-transform: capitalize;
+    border: none;
+    padding: 20px 40px;
+    color: white;
+    font-size: 1.3em;
+}
+
+.cart button {
+    background-color: orange;
+}
+
+.buy button {
+    background-color: tomato;
+    padding: 20px 45px;
+}
+
+.cart img {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buy img {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.discount-product {
+    font-size: 0.6em;
+    color: green;
+}
+
+@media (max-width: 1000px) {
+    /* login */
+    .login-data h3 {
+        font-size: 2.4em;
+    }
+    button {
+        font-size: 1em;
+    }
+    .login-option {
+        font-size: 1.1em;
+    }
+    .login-forgetchange p {
+        font-size: 1.1em;
+    }
+
+    /* register */
+    .welcome-data h3 {
+        font-size: 2.3em;
+    }
+    .welcome-login-data {
+        padding: 25px;
+    }
+    .welcome-login-fields input {
+        font-size: 1.1em;
+    }
+    .welcome-btn {
+        font-size: 1.1em;
+    }
+    .welcome-login-option {
+        font-size: 1.2em;
+    }
+
+    /* leftside and rightside */
+    .leftside, .rightside {
+        height: auto;
+        padding-bottom: 70px;
+    }
+    .filter-data li, .brand-data li {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    .product-title {
+        font-size: 1.6rem;
+    }
+    .product-rating {
+        font-size: 0.9rem;
+    }
+    .product-dimensions {
+        font-size: 1rem;
+    }
+    .product-price {
+        font-size: 1.5em;
+    }
+    .original-price {
+        font-size: 0.5em;
+    }
+    .discount {
+        font-size: 0.7em;
+    }
+    .product-info {
+        font-size: 1rem;
+    }
+
+    /* singleproduct */
+    .col-md-6 {
+        padding-top: 20px;
+        text-align: center;
+    }
+    h1.text-dark {
+        font-size: 1.8rem;
+    }
+    p.lead {
+        font-size: 1rem;
+    }
+    .cart, .buy {
+        margin-right: 1rem;
+    }
+    .cart img {
+        width: 55px;
+        left: -15px;
+    }
+    .buy img {
+        width: 24px;
+        left: 20px;
+    }
+    .cart button, .buy button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    .single-section {
+        padding: 25px 0px;
+    }
+    .star-rating {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* login */
+    .login-data h3 {
+        font-size: 2.2em;
+    }
+    button {
+        font-size: 1em;
+    }
+    .login-option {
+        font-size: 1.1em;
+    }
+    .login-forgetchange p {
+        font-size: 1em;
+    }
+
+    /* register */
+    .welcome-data h3 {
+        font-size: 2.2em;
+    }
+    .welcome-login-data {
+        padding: 20px;
+    }
+    .welcome-login-fields input {
+        font-size: 1em;
+    }
+    .welcome-btn {
+        font-size: 1em;
+    }
+    .welcome-login-option {
+        font-size: 1.15em;
+    }
+
+    /* leftside and rightside */
+    .leftside {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .rightside {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .product-details {
+        flex-direction: column;
+    }
+    .filter-data li, .brand-data li {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    .product-title {
+        font-size: 1.4rem;
+    }
+    .product-rating {
+        font-size: 0.8rem;
+    }
+    .product-dimensions {
+        font-size: 0.9rem;
+    }
+    .product-price {
+        font-size: 1.3em;
+    }
+    .original-price {
+        font-size: 0.4em;
+    }
+    .discount {
+        font-size: 0.6em;
+    }
+    .product-info {
+        font-size: 0.9rem;
+    }
+
+    /* singleproduct */
+    .col-md-6 {
+        margin-bottom: 20px;
+    }
+    h1.text-dark {
+        font-size: 1.8rem;
+    }
+    p.lead {
+        font-size: 1rem;
+    }
+    .single-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cart, .buy {
+        margin: 1rem 0;
+        align-items: center;
+        position: relative;
+        width: 100%;
+    }
+    .cart img {
+        margin-bottom: 0.5rem;
+        width: 55px;
+        height: auto;
+        left: 3px;
+    }
+    .buy img {
+        margin-bottom: 0.5rem;
+        width: 20px;
+        height: auto;
+        left: 30px;
+    }
+    .cart button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        margin-left: 20px;
+    }
+    .buy {
+        margin-left: 65px;
+    }
+    .buy button {
+        font-size: 1rem;
+        padding: 0.8rem 2.5rem;
+    }
+    .original-price-product {
+        font-size: 0.6em;
+    }
+    .product-price-product {
+        font-size: 1.5em;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    /* login */
+    .login-data h3 {
+        font-size: 1.8em;
+    }
+    button {
+        font-size: 0.9em;
+    }
+    .login-option {
+        font-size: 1em;
+    }
+    .login-forgetchange p {
+        font-size: 0.9em;
+    }
+
+    /* register */
+    .welcome-data h3 {
+        font-size: 1.8em;
+    }
+    .welcome-login-data {
+        padding: 15px;
+    }
+    .welcome-login-fields input {
+        font-size: 0.9em;
+    }
+    .welcome-btn {
+        font-size: 0.9em;
+    }
+    .welcome-login-option {
+        font-size: 1.1em;
+    }
+    .login-not button {
+        font-size: 0.9em;
+    }
+
+    /* leftside and rightside */
+    .filter-data li, .brand-data li {
+        font-size: 0.8em;
+    }
+    h3 {
+        font-size: 0.9em;
+    }
+    .product-title {
+        font-size: 1.2rem;
+    }
+    .product-rating {
+        font-size: 0.7rem;
+    }
+    .product-dimensions {
+        font-size: 0.8rem;
+    }
+    .product-price {
+        font-size: 1.2em;
+    }
+    .original-price {
+        font-size: 0.4em;
+    }
+    .discount {
+        font-size: 0.6em;
+    }
+    .product-info {
+        font-size: 0.8rem;
+    }
+
+    /* single-product */
+    .cart, .buy {
+        margin: 0.5rem 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .cart img {
+        width: 47px;
+        margin-bottom: 0.5rem;
+        left: -5px;
+    }
+    .buy img {
+        width: 18px;
+        margin-bottom: 0.5rem;
+    }
+    .cart button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        margin-left: 0px;
+    }
+    .buy button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.8rem;
+    }
+    .cart button span, .buy button span {
+        font-size: 0.9rem;
+    }
+}
