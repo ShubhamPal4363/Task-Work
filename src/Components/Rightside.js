@@ -10,18 +10,29 @@ function Rightside({ filterData }) {
   filterData = filterData.toLowerCase();
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/products/category/${filterData}`)
-    .then(res => res.json())
-    // .then(data => console.log(data.products));
-    .then(data => setProduct(data.products));
-  }, [])
+    const fetchProducts = () => {
+      if(filterData) {
+        fetch(`https://dummyjson.com/products/category/${filterData}`)
+        .then(res => res.json())
+        // .then(data => console.log(data.products));
+        .then(data => setProduct(data.products));
+      }
+      else {
+        fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(data => setProduct(data.products));
+      }
+    }
+
+    fetchProducts();
+  }, [filterData])
 
   return (
     <section className='rightside'>
       <div className='container'>
         <div className='row d-flex flex-column align-items-center justify-content-center gap-2'>
           {
-            product.slice(0, 16).map((val, i) => (
+            product.slice(0, 221).map((val, i) => (
               <div className='product-details flex-row col-12 d-flex border-bottom border-4 p-2' style={{cursor: 'pointer'}} key={i}>
                 <div className='col-4'>
                   <img className='img-fluid h-100' src={val.thumbnail} alt='thumbnail' />
@@ -46,10 +57,14 @@ function Rightside({ filterData }) {
                     <li>{val.warrantyInformation}</li>
                     <li>{val.shippingInformation}</li>
                   </ul>
-                  <select name='brand' id='brand'>
-                    <option value="brand-names">Brand</option>
-                    <option value={val.brand}>{val.brand}</option>
-                  </select>
+                  {
+                    val.brand && val.brand.length > 0 && (
+                      <select name='brand' id='brand'>
+                        <option value="brand-names">Brand</option>
+                        <option value={val.brand}>{val.brand}</option>
+                      </select>
+                    )
+                  }
                 </div>
               </div>
             ))

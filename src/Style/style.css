@@ -26,7 +26,7 @@
 
 /* leftside and rightside */
 .leftside {
-    height: 100vh;
+    height: auto;
     padding-bottom: 70px;
     overflow-y: auto;
 }

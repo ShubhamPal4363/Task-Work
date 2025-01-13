@@ -47,7 +47,7 @@ function Leftside({ setFilterData }) {
             </div>
             <ul className='filter-data list-unstyled d-flex align-items-center gap-2 flex-wrap py-2'>
                 {
-                    category.slice(0, 7).map((val, i) => (
+                    category.slice(0, 15).map((val, i) => (
                         <li className='text-capitalize' key={i} onClick={filternameData}>{val}</li>
                     ))
                 }

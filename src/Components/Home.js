@@ -4,7 +4,7 @@ import Rightside from './Rightside';
 
 function Home() {
 
-  const [filterData, setFilterData] = useState('kitchen-accessories');
+  const [filterData, setFilterData] = useState('');
   console.log(filterData);
 
   return (
