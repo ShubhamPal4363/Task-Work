@@ -1,59 +1,79 @@
-import React from 'react';
+import { React, useState } from 'react';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import "../Style/style.css";
 
 function Cart() {
-  return (
-    <section class="h-auto overflow-visible" style={{paddingTop: '100px', fontSize: '1rem'}}>
-      <div class="container h-100 py-5">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-10">
-            <h3 class="fw-normal mb-4">Shopping Cart</h3>
 
-            <div class="card rounded-3 mb-4">
-              <div class="card-body p-4">
-                <div class="row d-flex justify-content-between align-items-center">
-                  <div class="col-md-2 col-lg-2 col-xl-2">
+  const [quantity, setQuantity] = useState(2);
+
+  const increaseQuantity = () => setQuantity(quantity + 1);
+  const decreaseQuantity = () => setQuantity(quantity > 0 ? quantity - 1 : 0);
+
+  return (
+    <section style={{ padding: '6.25rem 0', fontSize: '1rem' }} className="h-auto overflow-visible">
+      <Container className="h-100 py-5">
+        <Row className="d-flex justify-content-center align-items-center h-100">
+          <Col lg={10}>
+            <h3 className="fw-normal mb-4">Shopping Cart</h3>
+
+            <Card className="rounded-3 mb-4">
+              <Card.Body className="p-4">
+                <Row className="d-flex justify-content-between align-items-center">
+                  <Col md={2} lg={2} xl={2}>
                     <img
                       src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-                      class="img-fluid rounded-3" alt="Cotton T-shirt" />
-                  </div>
-                  <div class="col-md-3 col-lg-3 col-xl-3">
-                    <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                    <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                  </div>
-                  <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                      <i class="fas fa-minus"></i>
-                    </button>
+                      className="img-fluid rounded-3"
+                      alt="Cotton T-shirt"
+                    />
+                  </Col>
+                  <Col md={3} lg={3} xl={3}>
+                    <p className="lead fw-normal mb-2">Basic T-shirt</p>
+                    <p><span className="text-muted">Size: </span>M <span className="text-muted">Color: </span>Grey</p>
+                  </Col>
+                  <Col md={3} lg={3} xl={2} className="d-flex">
+                    <Button
+                      variant="link"
+                      className="px-2"
+                      onClick={decreaseQuantity}
+                    >
+                      <i className="fas fa-minus"></i>
+                    </Button>
+                    <Form.Control
+                      type="number"
+                      min="0"
+                      value={quantity}
+                      onChange={(e) => setQuantity(e.target.value)}
+                      className="form-control-sm"
+                    />
+                    <Button
+                      variant="link"
+                      className="px-2"
+                      onClick={increaseQuantity}
+                    >
+                      <i className="fas fa-plus"></i>
+                    </Button>
+                  </Col>
+                  <Col md={3} lg={2} xl={2} className="offset-lg-1">
+                    <h5 className="mb-0">${(499.00 * quantity).toFixed(2)}</h5>
+                  </Col>
+                  <Col md={1} lg={1} xl={1} className="text-end">
+                    <a href="#!" className="text-danger"><i className="fas fa-trash fa-lg"></i></a>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
 
-                    <input id="form1" min="0" name="quantity" value="2" type="number"
-                      class="form-control form-control-sm" />
+            <Card>
+              <Card.Body>
+                <Button variant="warning" size="lg" block>
+                  Proceed to Pay
+                </Button>
+              </Card.Body>
+            </Card>
 
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                      <i class="fas fa-plus"></i>
-                    </button>
-                  </div>
-                  <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                    <h5 class="mb-0">$499.00</h5>
-                  </div>
-                  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                    <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-body">
-                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   )
 }
